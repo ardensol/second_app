@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  customer_id: 1
+  neck_i: 9.99
+  chest_i: 9.99
+  waist_i: 9.99
+  jacket_length_i: 9.99
+  shoulder_width_i: 9.99
+  sleeve_length_i: 9.99
+  sleeve_width_i: 9.99
+  wrist_i: 9.99
+  hip_i: 9.99
+  pants_length_i: 9.99
+  belt_i: 9.99
+  thigh_i: 9.99
+  knee_i: 9.99
+  crotch_i: 9.99
+
+two:
+  customer_id: 1
+  neck_i: 9.99
+  chest_i: 9.99
+  waist_i: 9.99
+  jacket_length_i: 9.99
+  shoulder_width_i: 9.99
+  sleeve_length_i: 9.99
+  sleeve_width_i: 9.99
+  wrist_i: 9.99
+  hip_i: 9.99
+  pants_length_i: 9.99
+  belt_i: 9.99
+  thigh_i: 9.99
+  knee_i: 9.99
+  crotch_i: 9.99

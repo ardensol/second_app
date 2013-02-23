@@ -11,7 +11,60 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130223191737) do
+ActiveRecord::Schema.define(:version => 20130223195904) do
+
+  create_table "customers", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "email"
+    t.integer  "height"
+    t.integer  "weight"
+    t.string   "phonenumber"
+    t.boolean  "delivered"
+    t.boolean  "called"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "meas_finals", :force => true do |t|
+    t.integer  "customer_id"
+    t.decimal  "neck"
+    t.decimal  "chest"
+    t.decimal  "waist"
+    t.decimal  "jacket_length"
+    t.decimal  "shoulder_width"
+    t.decimal  "sleeve_length"
+    t.decimal  "sleeve_width"
+    t.decimal  "wrist"
+    t.decimal  "hip"
+    t.decimal  "pants_length"
+    t.decimal  "belt"
+    t.decimal  "thigh"
+    t.decimal  "knee"
+    t.decimal  "crotch"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "meas_initials", :force => true do |t|
+    t.integer  "customer_id"
+    t.decimal  "neck_i"
+    t.decimal  "chest_i"
+    t.decimal  "waist_i"
+    t.decimal  "jacket_length_i"
+    t.decimal  "shoulder_width_i"
+    t.decimal  "sleeve_length_i"
+    t.decimal  "sleeve_width_i"
+    t.decimal  "wrist_i"
+    t.decimal  "hip_i"
+    t.decimal  "pants_length_i"
+    t.decimal  "belt_i"
+    t.decimal  "thigh_i"
+    t.decimal  "knee_i"
+    t.decimal  "crotch_i"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

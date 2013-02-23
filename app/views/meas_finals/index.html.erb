@@ -1,0 +1,51 @@
+<h1>Listing meas_finals</h1>
+
+<table>
+  <tr>
+    <th>Customer</th>
+    <th>Neck</th>
+    <th>Chest</th>
+    <th>Waist</th>
+    <th>Jacket length</th>
+    <th>Shoulder width</th>
+    <th>Sleeve length</th>
+    <th>Sleeve width</th>
+    <th>Wrist</th>
+    <th>Hip</th>
+    <th>Pants length</th>
+    <th>Belt</th>
+    <th>Thigh</th>
+    <th>Knee</th>
+    <th>Crotch</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @meas_finals.each do |meas_final| %>
+  <tr>
+    <td><%= meas_final.customer_id %></td>
+    <td><%= meas_final.neck %></td>
+    <td><%= meas_final.chest %></td>
+    <td><%= meas_final.waist %></td>
+    <td><%= meas_final.jacket_length %></td>
+    <td><%= meas_final.shoulder_width %></td>
+    <td><%= meas_final.sleeve_length %></td>
+    <td><%= meas_final.sleeve_width %></td>
+    <td><%= meas_final.wrist %></td>
+    <td><%= meas_final.hip %></td>
+    <td><%= meas_final.pants_length %></td>
+    <td><%= meas_final.belt %></td>
+    <td><%= meas_final.thigh %></td>
+    <td><%= meas_final.knee %></td>
+    <td><%= meas_final.crotch %></td>
+    <td><%= link_to 'Show', meas_final %></td>
+    <td><%= link_to 'Edit', edit_meas_final_path(meas_final) %></td>
+    <td><%= link_to 'Destroy', meas_final, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Meas final', new_meas_final_path %>

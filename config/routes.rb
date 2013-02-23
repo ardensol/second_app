@@ -1,5 +1,11 @@
 Ardenreed2::Application.routes.draw do
 
+  resources :meas_finals
+
+  resources :meas_initials
+
+  resources :customers
+
   devise_for :users
 
   root :to => "home#index"

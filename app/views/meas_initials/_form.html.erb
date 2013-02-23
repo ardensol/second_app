@@ -1,0 +1,25 @@
+<%= simple_form_for(@meas_initial) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :customer_id %>
+    <%= f.input :neck_i %>
+    <%= f.input :chest_i %>
+    <%= f.input :waist_i %>
+    <%= f.input :jacket_length_i %>
+    <%= f.input :shoulder_width_i %>
+    <%= f.input :sleeve_length_i %>
+    <%= f.input :sleeve_width_i %>
+    <%= f.input :wrist_i %>
+    <%= f.input :hip_i %>
+    <%= f.input :pants_length_i %>
+    <%= f.input :belt_i %>
+    <%= f.input :thigh_i %>
+    <%= f.input :knee_i %>
+    <%= f.input :crotch_i %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

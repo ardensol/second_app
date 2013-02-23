@@ -1,0 +1,51 @@
+<h1>Listing meas_initials</h1>
+
+<table>
+  <tr>
+    <th>Customer</th>
+    <th>Neck i</th>
+    <th>Chest i</th>
+    <th>Waist i</th>
+    <th>Jacket length i</th>
+    <th>Shoulder width i</th>
+    <th>Sleeve length i</th>
+    <th>Sleeve width i</th>
+    <th>Wrist i</th>
+    <th>Hip i</th>
+    <th>Pants length i</th>
+    <th>Belt i</th>
+    <th>Thigh i</th>
+    <th>Knee i</th>
+    <th>Crotch i</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @meas_initials.each do |meas_initial| %>
+  <tr>
+    <td><%= meas_initial.customer_id %></td>
+    <td><%= meas_initial.neck_i %></td>
+    <td><%= meas_initial.chest_i %></td>
+    <td><%= meas_initial.waist_i %></td>
+    <td><%= meas_initial.jacket_length_i %></td>
+    <td><%= meas_initial.shoulder_width_i %></td>
+    <td><%= meas_initial.sleeve_length_i %></td>
+    <td><%= meas_initial.sleeve_width_i %></td>
+    <td><%= meas_initial.wrist_i %></td>
+    <td><%= meas_initial.hip_i %></td>
+    <td><%= meas_initial.pants_length_i %></td>
+    <td><%= meas_initial.belt_i %></td>
+    <td><%= meas_initial.thigh_i %></td>
+    <td><%= meas_initial.knee_i %></td>
+    <td><%= meas_initial.crotch_i %></td>
+    <td><%= link_to 'Show', meas_initial %></td>
+    <td><%= link_to 'Edit', edit_meas_initial_path(meas_initial) %></td>
+    <td><%= link_to 'Destroy', meas_initial, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Meas initial', new_meas_initial_path %>
