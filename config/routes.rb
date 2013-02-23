@@ -1,5 +1,9 @@
 Ardenreed2::Application.routes.draw do
 
+  resources :products
+
+  resources :orders
+
   resources :meas_finals
 
   resources :meas_initials

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  customer_id: 1
+  order_value: 9.99
+  order_discount: 9.99
+  order_commission: 9.99
+  order_gross: 9.99
+
+two:
+  customer_id: 1
+  order_value: 9.99
+  order_discount: 9.99
+  order_commission: 9.99
+  order_gross: 9.99

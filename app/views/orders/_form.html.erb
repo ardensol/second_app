@@ -1,0 +1,15 @@
+<%= simple_form_for(@order) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :customer_id %>
+    <%= f.input :order_value %>
+    <%= f.input :order_discount %>
+    <%= f.input :order_commission %>
+    <%= f.input :order_gross %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
