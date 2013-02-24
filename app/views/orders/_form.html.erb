@@ -7,7 +7,21 @@
     <%= f.input :order_discount %>
     <%= f.input :order_commission %>
     <%= f.input :order_gross %>
+
+    <%= f.fields_for :products do |builder| %>
+    <fieldset>
+      <%= builder.label :product_name, "product" %> <br />
+      <%= builder.text_field :product_name %>
+
+      <%= builder.label :product_price, "price" %> <br />
+      <%= builder.text_field :product_price %><br />
+      <%= builder.check_box :_destroy %><br />
+      <%= builder.label :destroy, "Remove Question" %>
+
+    </fieldset>
   </div>
+
+  <% end %>
 
   <div class="form-actions">
     <%= f.button :submit %>
