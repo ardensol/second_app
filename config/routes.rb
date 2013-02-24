@@ -1,5 +1,7 @@
 Ardenreed2::Application.routes.draw do
 
+  resources :customizations
+
   resources :products
 
   resources :orders
