@@ -25,6 +25,7 @@ class CustomersController < ApplicationController
   # GET /customers/new.json
   def new
     @customer = Customer.new
+    @meas_initial = @customer.build_meas_initial
 
     respond_to do |format|
       format.html # new.html.erb

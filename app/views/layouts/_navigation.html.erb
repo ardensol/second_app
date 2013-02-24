@@ -18,4 +18,31 @@
     <%= link_to('Sign up', new_user_registration_path)  %>
     </li>
   <% end %>
+  <% if user_signed_in? %>
+    <li>
+    <%= link_to('Customers', customers_path) %>
+    </li>
+  <% else %>
+    <li>
+    </li>
+    <% end %>
+  <% if user_signed_in? %>
+    <li>
+    <%= link_to('Orders', orders_path) %>
+    </li>
+  <% else %>
+    <li>
+    </li>
+    <% end %>  
+    <% if user_signed_in? %>
+    <li>
+    <%= link_to('Final Measurements', meas_finals_path) %>
+    </li>
+    <li>
+    <%= link_to('Initial Measurements', meas_initials_path) %>
+    </li>
+  <% else %>
+    <li>
+    </li>
+    <% end %>    
 </ul>

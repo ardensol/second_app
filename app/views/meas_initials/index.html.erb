@@ -1,6 +1,6 @@
-<h1>Listing meas_initials</h1>
+<h1>Initial Measurements</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>Customer</th>
     <th>Neck i</th>
@@ -39,9 +39,9 @@
     <td><%= meas_initial.thigh_i %></td>
     <td><%= meas_initial.knee_i %></td>
     <td><%= meas_initial.crotch_i %></td>
-    <td><%= link_to 'Show', meas_initial %></td>
-    <td><%= link_to 'Edit', edit_meas_initial_path(meas_initial) %></td>
-    <td><%= link_to 'Destroy', meas_initial, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', meas_initial, class: "btn btn-mini btn-primary" %></td>
+    <td><%= link_to 'Edit', edit_meas_initial_path(meas_initial), class: "btn btn-mini" %></td>
+    <td><%= link_to 'Destroy', meas_initial, confirm: 'Are you sure?', method: :delete, class: "btn btn-mini btn-danger" %></td>
   </tr>
 <% end %>
 </table>
