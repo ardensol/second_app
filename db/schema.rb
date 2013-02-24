@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(:version => 20130224003249) do
     t.boolean  "called"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.integer  "user_id"
   end
 
   create_table "customizations", :force => true do |t|
