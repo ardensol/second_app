@@ -1,5 +1,6 @@
 class CustomersController < ApplicationController
   load_and_authorize_resource
+
   # GET /customers
   # GET /customers.json
   def index
@@ -22,7 +23,8 @@ class CustomersController < ApplicationController
   # GET /customers/new.json
   def new
     @customer = Customer.new
-
+    @meas_initial = @customer_build_meas_initial
+    @customer.save
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @customer }
@@ -77,4 +79,6 @@ class CustomersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end
+

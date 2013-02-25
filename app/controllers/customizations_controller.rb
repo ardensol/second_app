@@ -25,7 +25,7 @@ class CustomizationsController < ApplicationController
   # GET /customizations/new.json
   def new
     @customization = Customization.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @customization }
