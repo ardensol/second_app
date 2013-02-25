@@ -7,6 +7,9 @@
     <%= f.input :order_discount %>
     <%= f.input :order_commission %>
     <%= f.input :order_gross %>
+    <%= f.input :altered %>
+    <%= f.input :refunded %>
+    <%= f.input :alt_ref_cost %>
 
     <%= f.fields_for :products do |builder| %>
     <%= render 'product_fields', f: builder %>

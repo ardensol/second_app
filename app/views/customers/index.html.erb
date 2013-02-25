@@ -27,11 +27,19 @@
     <td><%= customer.phonenumber %></td>
     <td><%= customer.delivered %></td>
     <td><%= customer.called %></td>
+     
+
+     <% if can? :update, @final_path %>   
      <td>
             <%= link_to 'Edit Final M', edit_meas_final_path(customer.id), class: 'btn btn-mini' %></td>
+    <%end%>
     <td><%= link_to 'Show', customer, class: "btn btn-mini" %></td>
+    <% if can? :update, @customer %>
     <td><%= link_to 'Edit', edit_customer_path(customer), class: "btn btn-mini btn-primary" %></td>
+    <%end%>
+    <% if can? :destroy, @customer %>
     <td><%= link_to 'Destroy', customer, confirm: 'Are you sure?', method: :delete, class: "btn btn-mini btn-danger" %></td>
+    <%end%>
   </tr>
 <% end %>
 </table>

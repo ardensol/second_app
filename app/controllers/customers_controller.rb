@@ -1,9 +1,8 @@
 class CustomersController < ApplicationController
+  load_and_authorize_resource
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @customers }
@@ -13,8 +12,6 @@ class CustomersController < ApplicationController
   # GET /customers/1
   # GET /customers/1.json
   def show
-    @customer = Customer.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @customer }

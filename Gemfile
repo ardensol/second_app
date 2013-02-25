@@ -7,6 +7,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'pg'
 gem 'thin'
+gem 'cancan'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

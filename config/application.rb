@@ -11,6 +11,7 @@ end
 
 module Ardenreed2
   class Application < Rails::Application
+      
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -38,7 +39,6 @@ module Ardenreed2
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
-
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
     # like if you have constraints or database-specific column types
@@ -55,5 +55,8 @@ module Ardenreed2
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
   end
+    
 end
+ 
