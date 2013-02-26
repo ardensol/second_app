@@ -1,0 +1,22 @@
+<%= simple_form_for(@shirt) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :shirt_name %>
+    <%= f.input :price %>
+    <%= f.input :collar %>
+    <%= f.input :cuffs %>
+    <%= f.input :placket %>
+    <%= f.input :pocket %>
+    <%= f.input :fit %>
+    <%= f.input :bottom %>
+    <%= f.input :contrast_color %>
+    <%= f.input :contrast_area %>
+    <%= f.input :monongram %>
+    <%= f.input :quantity %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

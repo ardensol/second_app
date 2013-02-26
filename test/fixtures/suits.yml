@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  suit_name: MyString
+  price: 9.99
+  lapel: MyString
+  vent: MyString
+  button: MyString
+  contrast_color: MyString
+  contrast_area: MyString
+  advanced: MyString
+  pleats: MyString
+  cuffs: MyString
+  quantity: 1
+
+two:
+  suit_name: MyString
+  price: 9.99
+  lapel: MyString
+  vent: MyString
+  button: MyString
+  contrast_color: MyString
+  contrast_area: MyString
+  advanced: MyString
+  pleats: MyString
+  cuffs: MyString
+  quantity: 1

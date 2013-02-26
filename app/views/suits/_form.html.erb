@@ -1,0 +1,21 @@
+<%= simple_form_for(@suit) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :suit_name %>
+    <%= f.input :price %>
+    <%= f.input :lapel %>
+    <%= f.input :vent %>
+    <%= f.input :button %>
+    <%= f.input :contrast_color %>
+    <%= f.input :contrast_area %>
+    <%= f.input :advanced %>
+    <%= f.input :pleats %>
+    <%= f.input :cuffs %>
+    <%= f.input :quantity %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

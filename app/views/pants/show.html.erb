@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Pant name:</b>
+  <%= @pant.pant_name %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @pant.price %>
+</p>
+
+<p>
+  <b>Pleats:</b>
+  <%= @pant.pleats %>
+</p>
+
+<p>
+  <b>Cuffs:</b>
+  <%= @pant.cuffs %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @pant.quantity %>
+</p>
+
+
+<%= link_to 'Edit', edit_pant_path(@pant) %> |
+<%= link_to 'Back', pants_path %>

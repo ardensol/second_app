@@ -11,14 +11,28 @@
     <%= f.input :refunded %>
     <%= f.input :alt_ref_cost %>
 
-    <%= f.fields_for :products do |builder| %>
-    <%= render 'product_fields', f: builder %>
+    <%= f.fields_for :shirts do |builder| %>
+    <%= render 'shirt_fields', f: builder %>
     <% end %>
-    <%= link_to_add_fields "Add Product", f, :products %>
+    <%= link_to_add_fields "Add Shirt", f, :shirts %>
+
+    <%= f.fields_for :suits do |builder| %>
+    <%= render 'suit_fields', f: builder %>
+    <% end %>
+    <%= link_to_add_fields "Add Suit", f, :suits %>
+
+  <%= f.fields_for :pants do |builder| %>
+    <%= render 'pant_fields', f: builder %>
+    <% end %>
+    <%= link_to_add_fields "Add Pant", f, :pants %>
   </div>
 
+    <%= f.fields_for :others do |builder| %>
+    <%= render 'other_fields', f: builder %>
+    <% end %>
+    <%= link_to_add_fields "Add Other", f, :others %>
+  </div>
   
-
   <div class="form-actions">
     <%= f.button :submit %>
   </div>

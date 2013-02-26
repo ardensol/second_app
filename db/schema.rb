@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130225014417) do
+ActiveRecord::Schema.define(:version => 20130226033142) do
 
   create_table "customers", :force => true do |t|
     t.string   "name"
@@ -88,12 +88,68 @@ ActiveRecord::Schema.define(:version => 20130225014417) do
     t.integer  "user_id"
   end
 
+  create_table "others", :force => true do |t|
+    t.string   "other_name"
+    t.decimal  "price"
+    t.string   "description"
+    t.integer  "quantity"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "order_id"
+  end
+
+  create_table "pants", :force => true do |t|
+    t.string   "pant_name"
+    t.decimal  "price"
+    t.string   "pleats"
+    t.string   "cuffs"
+    t.integer  "quantity"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "order_id"
+  end
+
   create_table "products", :force => true do |t|
     t.integer  "order_id"
     t.string   "product_name"
     t.decimal  "product_price"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "shirts", :force => true do |t|
+    t.string   "shirt_name"
+    t.decimal  "price"
+    t.string   "collar"
+    t.string   "cuffs"
+    t.string   "placket"
+    t.string   "pocket"
+    t.string   "fit"
+    t.string   "bottom"
+    t.string   "contrast_color"
+    t.string   "contrast_area"
+    t.string   "monongram"
+    t.integer  "quantity"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "order_id"
+  end
+
+  create_table "suits", :force => true do |t|
+    t.string   "suit_name"
+    t.decimal  "price"
+    t.string   "lapel"
+    t.string   "vent"
+    t.string   "button"
+    t.string   "contrast_color"
+    t.string   "contrast_area"
+    t.string   "advanced"
+    t.string   "pleats"
+    t.string   "cuffs"
+    t.integer  "quantity"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "order_id"
   end
 
   create_table "users", :force => true do |t|

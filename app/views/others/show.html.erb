@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Other name:</b>
+  <%= @other.other_name %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @other.price %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @other.description %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @other.quantity %>
+</p>
+
+
+<%= link_to 'Edit', edit_other_path(@other) %> |
+<%= link_to 'Back', others_path %>

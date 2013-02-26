@@ -1,8 +1,12 @@
 Ardenreed2::Application.routes.draw do
 
-  resources :customizations
+  resources :others
 
-  resources :products
+  resources :pants
+
+  resources :suits
+
+  resources :shirts
 
   resources :orders
 

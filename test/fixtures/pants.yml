@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pant_name: MyString
+  price: 9.99
+  pleats: MyString
+  cuffs: MyString
+  quantity: 1
+
+two:
+  pant_name: MyString
+  price: 9.99
+  pleats: MyString
+  cuffs: MyString
+  quantity: 1

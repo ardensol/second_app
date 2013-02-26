@@ -25,6 +25,37 @@
   <%= @order.order_gross %>
 </p>
 
+<ul>
+  <li>
+  <% for suit in @order.suits %>
+    <%= render 'show_suit', f: suit %>
+  <% end %>
+  </li>
+</ul>
+
+<ul>
+  <li>
+  <% for shirt in @order.shirts %>
+    <%= render 'show_shirt', f: shirt %>
+  <% end %>
+  </li>
+</ul>
+
+<ul>
+  <li>
+  <% for pant in @order.pants %>
+    <%= render 'show_pant', f: pant %>
+  <% end %>
+  </li>
+</ul>
+
+<ul>
+  <li>
+  <% for other in @order.others %>
+    <%= render 'show_other', f: other %>
+  <% end %>
+  </li>
+</ul>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>

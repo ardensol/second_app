@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  shirt_name: MyString
+  price: 9.99
+  collar: MyString
+  cuffs: MyString
+  placket: MyString
+  pocket: MyString
+  fit: MyString
+  bottom: MyString
+  contrast_color: MyString
+  contrast_area: MyString
+  monongram: MyString
+  quantity: 1
+
+two:
+  shirt_name: MyString
+  price: 9.99
+  collar: MyString
+  cuffs: MyString
+  placket: MyString
+  pocket: MyString
+  fit: MyString
+  bottom: MyString
+  contrast_color: MyString
+  contrast_area: MyString
+  monongram: MyString
+  quantity: 1

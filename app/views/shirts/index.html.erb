@@ -1,0 +1,45 @@
+<h1>Listing shirts</h1>
+
+<table>
+  <tr>
+    <th>Shirt name</th>
+    <th>Price</th>
+    <th>Collar</th>
+    <th>Cuffs</th>
+    <th>Placket</th>
+    <th>Pocket</th>
+    <th>Fit</th>
+    <th>Bottom</th>
+    <th>Contrast color</th>
+    <th>Contrast area</th>
+    <th>Monongram</th>
+    <th>Quantity</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shirts.each do |shirt| %>
+  <tr>
+    <td><%= shirt.shirt_name %></td>
+    <td><%= shirt.price %></td>
+    <td><%= shirt.collar %></td>
+    <td><%= shirt.cuffs %></td>
+    <td><%= shirt.placket %></td>
+    <td><%= shirt.pocket %></td>
+    <td><%= shirt.fit %></td>
+    <td><%= shirt.bottom %></td>
+    <td><%= shirt.contrast_color %></td>
+    <td><%= shirt.contrast_area %></td>
+    <td><%= shirt.monongram %></td>
+    <td><%= shirt.quantity %></td>
+    <td><%= link_to 'Show', shirt %></td>
+    <td><%= link_to 'Edit', edit_shirt_path(shirt) %></td>
+    <td><%= link_to 'Destroy', shirt, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shirt', new_shirt_path %>
