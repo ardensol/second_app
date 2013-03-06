@@ -1,0 +1,16 @@
+<%= simple_form_for(@boxrequest) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :customer_id %>
+    <%= f.input :requesttype %>
+    <%= f.input :request_date %>
+    <%= f.input :date_sent %>
+    <%= f.input :shipping_number %>
+    <%= f.input :followed_up %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

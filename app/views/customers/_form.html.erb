@@ -8,9 +8,7 @@
     <%= f.input :height %>
     <%= f.input :weight %>
     <%= f.input :phonenumber %>
-    <%= f.input :delivered %>
-    <%= f.input :called %>
-
+    
     <%= f.fields_for :meas_initial do |builder| %>
       <%= render 'meas_init_fields', f: builder %>
     <% end %>

@@ -1,8 +1,7 @@
 # TO DOS
-	#ADD ORDER CUSTOMIZATIONS FOR SUITS AND SHIRTS
 	#ADD PDF OUTPUT FOR ORDERS
-	#ADD BOOLEANS FOR PROCESSED AND SHIPPED FOR ORDERS
 	#ADD DASHBOARD
+
 
 source 'https://rubygems.org'
 
@@ -14,6 +13,8 @@ gem 'devise'
 gem 'pg'
 gem 'thin'
 gem 'cancan'
+gem 'nokogiri'
+gem 'mechanize'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

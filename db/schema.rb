@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130226033142) do
+ActiveRecord::Schema.define(:version => 20130306183352) do
+
+  create_table "boxrequests", :force => true do |t|
+    t.integer  "customer_id"
+    t.string   "requesttype"
+    t.string   "request_date"
+    t.string   "date_sent"
+    t.boolean  "followed_up"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "shipping_number"
+  end
 
   create_table "customers", :force => true do |t|
     t.string   "name"
@@ -20,8 +31,6 @@ ActiveRecord::Schema.define(:version => 20130226033142) do
     t.integer  "height"
     t.integer  "weight"
     t.string   "phonenumber"
-    t.boolean  "delivered"
-    t.boolean  "called"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "user_id"
@@ -80,12 +89,19 @@ ActiveRecord::Schema.define(:version => 20130226033142) do
     t.decimal  "order_discount"
     t.decimal  "order_commission"
     t.decimal  "order_gross"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
     t.boolean  "altered"
     t.boolean  "refunded"
     t.decimal  "alt_ref_cost"
     t.integer  "user_id"
+    t.boolean  "delivered"
+    t.boolean  "called"
+    t.boolean  "received_measurement"
+    t.boolean  "in_process"
+    t.boolean  "readytoship"
+    t.boolean  "shipped"
+    t.string   "shipping_number"
   end
 
   create_table "others", :force => true do |t|

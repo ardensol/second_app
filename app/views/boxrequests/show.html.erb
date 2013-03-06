@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Customer:</b>
+  <%= @boxrequest.customer_id %>
+</p>
+
+<p>
+  <b>Customer Name:</b>
+  <%= @boxrequest.customer.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @boxrequest.customer.address %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @boxrequest.customer.phonenumber %>
+</p>
+
+<p>
+  <b>Requesttype:</b>
+  <%= @boxrequest.requesttype %>
+</p>
+
+<p>
+  <b>Request date:</b>
+  <%= @boxrequest.request_date %>
+</p>
+
+<p>
+  <b>Date sent:</b>
+  <%= @boxrequest.date_sent %>
+</p>
+<p>
+  <b>Shipping #:</b>
+  <%= @boxrequest.shipping_number %>
+</p>
+
+<p>
+  <b>Followed up:</b>
+  <%= @boxrequest.followed_up %>
+</p>
+
+
+<%= link_to 'Edit', edit_boxrequest_path(@boxrequest) %> |
+<%= link_to 'Back', boxrequests_path %>

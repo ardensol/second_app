@@ -6,9 +6,17 @@
     <%= f.input :order_value %>
     <%= f.input :order_discount %>
     <%= f.input :order_commission %>
-    <%= f.input :order_gross %>
+    <%= f.input :order_gross %>  
+    <%= f.input :received_measurement %>
+    <%= f.input :in_process %>
+    <%= f.input :readytoship %>
+    <%= f.input :shipped %>
+    <%= f.input :shipping_number %>
+    <%= f.input :delivered %>
+    <%= f.input :called %>
     <%= f.input :altered %>
     <%= f.input :refunded %>
+    
     <%= f.input :alt_ref_cost %>
 
     <%= f.fields_for :shirts do |builder| %>

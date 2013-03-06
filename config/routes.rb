@@ -1,5 +1,7 @@
 Ardenreed2::Application.routes.draw do
 
+  resources :boxrequests
+
   resources :others
 
   resources :pants
