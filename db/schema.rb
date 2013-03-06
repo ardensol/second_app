@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130306183352) do
+ActiveRecord::Schema.define(:version => 20130306223639) do
 
   create_table "boxrequests", :force => true do |t|
     t.integer  "customer_id"
@@ -102,6 +102,7 @@ ActiveRecord::Schema.define(:version => 20130306183352) do
     t.boolean  "readytoship"
     t.boolean  "shipped"
     t.string   "shipping_number"
+    t.string   "order_number"
   end
 
   create_table "others", :force => true do |t|
