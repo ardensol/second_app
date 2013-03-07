@@ -8,9 +8,14 @@
     <%= f.input :height %>
     <%= f.input :weight %>
     <%= f.input :phonenumber %>
-    
-    <%= f.fields_for :meas_initial do |builder| %>
-      <%= render 'meas_init_fields', f: builder %>
+    <% if @customer.meas_final.neck.present? %>
+      <%= f.fields_for :meas_final do |builder| %>
+        <%= render 'meas_final_fields', f: builder %>
+      <% end %>
+    <% else %>
+      <%= f.fields_for :meas_initial do |builder| %>
+        <%= render 'meas_init_fields', f: builder %>
+      <% end %>
     <% end %>
   
   </div>

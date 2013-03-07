@@ -36,10 +36,15 @@
     <% end %>  
     <% if user_signed_in? %>
     <li>
-    <%= link_to('Final Measurements', meas_finals_path) %>
-    </li>
-    <li>
     <%= link_to('Box Requests', boxrequests_path) %>
+    </li>
+      <% else %>
+    <li>
+    </li>
+    <% end %>
+    <% if user_signed_in? %>
+    <li>
+    <%= link_to('Final Measurements Index', meas_finals_path) %>
     </li>
       <% else %>
     <li>

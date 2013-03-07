@@ -12,11 +12,11 @@ Ardenreed2::Application.routes.draw do
 
   resources :orders
 
-  resources :meas_finals
-
-  resources :meas_initials
-
   resources :customers
+
+  resources :meas_finals
+  resources :meas_initials 
+  
 
   devise_for :users
 

@@ -1,6 +1,28 @@
 <h1>Editing customer</h1>
 
-<%= render 'form' %>
+<%= simple_form_for(@customer) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :email %>
+    <%= f.input :height %>
+    <%= f.input :weight %>
+    <%= f.input :phonenumber %>
+	  <%= f.fields_for :meas_initial do |builder| %>
+	    <%= render 'meas_init_fields', f: builder %>
+	  <% end %>
+	 <%= f.fields_for :meas_final do |builder| %>
+	    <%= render 'meas_final_fields', f: builder %>
+	  <% end %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+
 
 <%= link_to 'Show', @customer %> |
 <%= link_to 'Back', customers_path %>

@@ -24,6 +24,7 @@ class CustomersController < ApplicationController
   def new
     @customer = Customer.new
     @meas_initial = @customer_build_meas_initial
+    @meas_final = @customer_build_meas_final
     @customer.save
     respond_to do |format|
       format.html # new.html.erb

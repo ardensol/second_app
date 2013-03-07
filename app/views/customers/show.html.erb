@@ -30,6 +30,12 @@
   <%= @customer.phonenumber %>
 </p>
 
+<% if @customer.meas_final.neck.present? %>
+    <%= render 'show_meas_final' %>
+<% else %>
+     <%= render 'show_meas_initial' %>
+  <% end %>
+
 
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>
