@@ -4,20 +4,18 @@
   <div class="form-inputs">
     <%= f.input :customer_id %>
     <%= f.input :order_number %>
+    <%= f.input :order_date %>
     <%= f.input :order_value %>
     <%= f.input :order_discount %>
-    <%= f.input :order_commission %>
+    <%= f.input :order_cogs %>
     <%= f.input :order_gross %>  
-    <%= f.input :received_measurement %>
-    <%= f.input :in_process %>
-    <%= f.input :readytoship %>
-    <%= f.input :shipped %>
+    <%= f.input :status, collection: ["received measurements", "in process", "ready to ship", "shipped", "delivered"] %>
+    <%= f.input :expected_ship_date %>
+    <%= f.input :shipped_date %>
     <%= f.input :shipping_number %>
-    <%= f.input :delivered %>
     <%= f.input :called %>
     <%= f.input :altered %>
     <%= f.input :refunded %>
-    
     <%= f.input :alt_ref_cost %>
 
     <%= f.fields_for :shirts do |builder| %>

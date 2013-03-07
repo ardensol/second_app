@@ -11,6 +11,16 @@
 </p>
 
 <p>
+  <b>Order Date:</b>
+  <%= @order.order_date %>
+</p>
+
+<p>
+  <b>Assigned Factory:</b>
+  <%= @order.assigned_factory %>
+</p>
+
+<p>
   <b>Order value:</b>
   <%= @order.order_value %>
 </p>
@@ -22,36 +32,27 @@
 
 <p>
   <b>Order commission:</b>
-  <%= @order.order_commission %>
+  <%= @order.order_cogs %>
 </p>
-
 <p>
   <b>Order gross:</b>
   <%= @order.order_gross %>
 </p>
 <p>
-  <b>Received Measurements:</b>
-  <%= @order.received_measurement %>
+  <b>Expected Shipping Date:</b>
+  <%= @order.expected_ship_date %>
 </p>
 <p>
-  <b>In_Process:</b>
-  <%= @order.in_process %>
+  <b>Date Shipped:</b>
+  <%= @order.shipped_date %>
 </p>
 <p>
-  <b>Ready to Ship:</b>
-  <%= @order.readytoship %>
-</p>
-<p>
-  <b>Shipped:</b>
-  <%= @order.shipped %>
+  <b>Status:</b>
+  <%= @order.status %>
 </p>
 <p>
   <b>Shipping Number:</b>
   <%= @order.shipping_number %>
-</p>
-<p>
-  <b>Delivered:</b>
-  <%= @order.delivered %>
 </p>
 
 <p>
@@ -73,6 +74,13 @@
   <b>Cost of Return:</b>
   <%= @order.alt_ref_cost %>
 </p>
+<% if @order.customer.meas_final.neck.present? %>
+    <%= render 'show_meas_final' %>
+<% else %>
+     <%= render 'show_meas_initial' %>
+<% end %>
+
+
 <ul>
   <li>
   <% for suit in @order.suits %>

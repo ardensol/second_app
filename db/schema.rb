@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130306223639) do
+ActiveRecord::Schema.define(:version => 20130307223740) do
 
   create_table "boxrequests", :force => true do |t|
     t.integer  "customer_id"
@@ -87,22 +87,22 @@ ActiveRecord::Schema.define(:version => 20130306223639) do
     t.integer  "customer_id"
     t.decimal  "order_value"
     t.decimal  "order_discount"
-    t.decimal  "order_commission"
     t.decimal  "order_gross"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.boolean  "altered"
     t.boolean  "refunded"
     t.decimal  "alt_ref_cost"
     t.integer  "user_id"
-    t.boolean  "delivered"
     t.boolean  "called"
-    t.boolean  "received_measurement"
-    t.boolean  "in_process"
-    t.boolean  "readytoship"
-    t.boolean  "shipped"
     t.string   "shipping_number"
     t.string   "order_number"
+    t.string   "status"
+    t.decimal  "order_cogs"
+    t.string   "assigned_factory"
+    t.date     "order_date"
+    t.date     "expected_ship_date"
+    t.date     "shipped_date"
   end
 
   create_table "others", :force => true do |t|

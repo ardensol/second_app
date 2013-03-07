@@ -4,16 +4,15 @@
   <tr>
     <th>Customer</th>
     <th>Order Number</th>
+    <th>Order Date</th>
     <th>Order value</th>
     <th>Order discount</th>
-    <th>Order commission</th>
+    <th>Order COGS</th>
     <th>Order gross</th>
-    <th>Received Measurement</th>
-    <th>In process?</th>
-    <th>Ready to Ship??</th>
-    <th>Shipped?</th>
+    <th>Status</th>
+    <th>Expected Ship Date</th>
+    <th>Shipped Date</th>
     <th>Shipping number</th>
-    <th>Delivered?</th>
     <th>Called?</th> 
     <th>Altered?</th>
     <th>Returned?</th>
@@ -27,16 +26,15 @@
   <tr>
     <td><%= order.customer_id %></td>
     <td><%= order.order_number %></td>  
+    <td><%= order.order_date %></td>
     <td><%= order.order_value %></td>
     <td><%= order.order_discount %></td>
-    <td><%= order.order_commission %></td>
+    <td><%= order.order_cogs %></td>
     <td><%= order.order_gross %></td>
-    <td><%= order.received_measurement %></td>
-    <td><%= order.in_process %></td>
-    <td><%= order.readytoship %></td>
-    <td><%= order.shipped %></td>
+    <td><%= order.status %></td>
+    <td><%= order.expected_ship_date %></td>
+    <td><%= order.shipped_date %></td>
     <td><%= order.shipping_number %></td>
-    <td><%= order.delivered %></td>
     <td><%= order.called %></td>
     <td><%= order.altered %></td>
     <td><%= order.refunded %></td>

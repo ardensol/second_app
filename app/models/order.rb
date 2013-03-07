@@ -1,5 +1,5 @@
 class Order < ActiveRecord::Base
-  attr_accessible :customer_id, :order_commission, :order_discount, :order_gross, :order_value, :called, :received_measurement, :in_process, :readytoship, :shipped, :shipping_number, :delivered, :altered, :refunded, :alt_ref_cost, :shirts_attributes, :suits_attributes, :pants_attributes, :others_attributes
+  attr_accessible :customer_id, :order_number, :order_date, :order_value, :order_cogs, :order_discount, :order_gross, :status, :expected_ship_date, :shipped_date, :shipping_number, :altered, :refunded, :called, :alt_ref_cost, :shirts_attributes, :suits_attributes, :pants_attributes, :others_attributes
   has_many :shirts
   has_many :suits
   has_many :pants

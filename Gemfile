@@ -3,13 +3,9 @@
 	#ADD DASHBOARD
 	#ADD SCRAPER
 	#FiX JQUERY error in pages
-	#Show Customer Measurements with If function for Final Measurements
-	#Change Order Commission to Order COGS
 	#Reorder Measurements Entry
     #Fix Order 
-    #Turn Order Status into dropdown
-    #Add assigned Factory, Order Received Date, Expected Shpping Date, Date Shipped
-
+    
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
