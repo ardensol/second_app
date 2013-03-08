@@ -17,6 +17,9 @@ gem 'cancan'
 gem 'nokogiri'
 gem 'mechanize'
 gem 'prawn'
+gem 'activeadmin'
+gem 'meta_search', '>=1.1.0.pre'
+gem 'sass-rails',   '~> 3.2.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -24,7 +27,7 @@ gem 'prawn'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
