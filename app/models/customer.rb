@@ -8,7 +8,7 @@ class Customer < ActiveRecord::Base
   accepts_nested_attributes_for :meas_initial
   accepts_nested_attributes_for :meas_final
   has_many :orders
-  has_many :boxrequest
+  has_many :boxrequests
   belongs_to :user
 
 end

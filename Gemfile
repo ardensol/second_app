@@ -4,7 +4,7 @@
 	#ADD SCRAPER
 	#FiX JQUERY error in pages
 	#Reorder Measurements Entry
-    #Fix Order 
+  #create order link in index
     
 source 'https://rubygems.org'
 

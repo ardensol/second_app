@@ -25,6 +25,7 @@ class BoxrequestsController < ApplicationController
   # GET /boxrequests/new.json
   def new
     @boxrequest = Boxrequest.new
+    @boxrequest.customer_id = params[:customer_id] 
 
     respond_to do |format|
       format.html # new.html.erb
