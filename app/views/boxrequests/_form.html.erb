@@ -3,8 +3,9 @@
 
   <div class="form-inputs">
     <%= f.hidden_field :customer_id %>
-    <%= f.input :requesttype %>
+    <%= f.input :requesttype, collection: ["Box","Measuring Tape"] %> %>
     <%= f.input :request_date %>
+    <%= f.input :sent_from, collection: ["Mike", "Richi", "Carlos"] %>
     <%= f.input :date_sent %>
     <%= f.input :shipping_number %>
     <%= f.input :followed_up %>

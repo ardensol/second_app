@@ -8,6 +8,7 @@
     <th>Number</th>
     <th>Requesttype</th>
     <th>Request date</th>
+    <th>Sent From</th>
     <th>Date sent</th>
     <th>Shipping Number</th>
     <th>Followed up</th>
@@ -24,6 +25,7 @@
     <td><%= boxrequest.customer.phonenumber %></td>
     <td><%= boxrequest.requesttype %></td>
     <td><%= boxrequest.request_date %></td>
+    <td><%= boxrequest.sent_from %></td>
     <td><%= boxrequest.date_sent %></td>
      <td><%= boxrequest.shipping_number %></td>
     <td><%= boxrequest.followed_up %></td>
@@ -35,5 +37,3 @@
 </table>
 
 <br />
-
-<%= link_to 'New Box Request', new_boxrequest_path, class: "btn btn-mini btn-primary" %>

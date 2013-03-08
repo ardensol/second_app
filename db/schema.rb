@@ -11,17 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130307223740) do
+ActiveRecord::Schema.define(:version => 20130308161114) do
 
   create_table "boxrequests", :force => true do |t|
     t.integer  "customer_id"
     t.string   "requesttype"
-    t.string   "request_date"
-    t.string   "date_sent"
     t.boolean  "followed_up"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "shipping_number"
+    t.date     "request_date"
+    t.date     "date_sent"
+    t.string   "sent_from"
   end
 
   create_table "customers", :force => true do |t|

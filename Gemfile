@@ -3,7 +3,6 @@
 	#ADD SCRAPER
 	#FiX JQUERY error in pages
 	#Reorder Measurements Entry
-  #Create Dropdown options
     
 source 'https://rubygems.org'
 

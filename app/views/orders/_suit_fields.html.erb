@@ -1,25 +1,15 @@
 <fieldset>
-  <%= f.label :suit_name, "Suit" %> <br />
-  <%= f.text_field :suit_name %>  
-	<%= f.label :quantity, "Contrast Area" %> <br />
-  <%= f.text_field :quantity %><br />
-  <%= f.label :price, "Shirt price" %> <br />
-  <%= f.text_field :price %><br />
-    <%= f.label :lapel, "Lapel" %> <br />
-  <%= f.text_field :lapel %><br />
-    <%= f.label :vent, "Vent" %> <br />
-  <%= f.text_field :vent %><br />
-    <%= f.label :button, "Buttons" %> <br />
-  <%= f.text_field :button %><br />
-    <%= f.label :contrast_color, "Contrast Color" %> <br />
-  <%= f.text_field :contrast_color %><br />
-    <%= f.label :contrast_area, "Areas" %> <br />
-  <%= f.text_field :contrast_area %><br />
-    <%= f.label :advanced, "advanced" %> <br />
-  <%= f.text_field :advanced %><br />
-    <%= f.label :pleats, "Pleats" %> <br />
-  <%= f.text_field :pleats %><br />
-    <%= f.label :cuffs, "Cuffs" %> <br />
-  <%= f.text_field :cuffs %><br />
-  <%= link_to  "remove", '#', class: "remove_fields" %>
+
+    <%= f.input :suit_name %>  
+    <%= f.input :quantity %>
+    <%= f.input :price %>
+    <%= f.input :lapel, collection: ["Standard", "Slim", "Peak"] %>
+    <%= f.input :vent, collection: ["1","2","3"] %>
+    <%= f.input :button, collection: ["1","2","3"] %>
+    <%= f.input :contrast_color %>
+    <%= f.input :contrast_area, as: :check_boxes, collection: ["Inside Collar", "Lapel Button", "Sleeve Button", "Lining"] %>
+    <%= f.input :advanced, collection: ["Functional Buttons", "picked stitching (lapel)"] %>
+    <%= f.input :pleats, collection: ["No Pleats", "Pleats"] %>
+    <%= f.input :cuffs, collection: ["Cuffs", "No Cuffs"] %>
+    <%= link_to  "remove", '#', class: "remove_fields" %>
 </fieldset>
