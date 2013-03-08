@@ -1,132 +1,141 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Customer:</b>
-  <%= @order.customer_id %>
-</p>
 
-<p>
-  <b>Name:</b>
-  <%= @order.customer.name %>
-</p>
+<p> <%= link_to "Download PDF", order_path(@order, format: "pdf"), class: "btn btn-mini btn-danger"%></p>
+<div class ="container">
+  <div class="row">
+      <form class="form-horizontal">
+        <div class ="span6">    
+        <fieldset>
+            <p>
+            <b>Name:</b>
+            <%= @order.customer.name %>
+            </p>
+            <p>
+              <b>Address:</b>
+              <%= @order.customer.address %>
+            </p>
 
-<p>
-  <b>Address:</b>
-  <%= @order.customer.address %>
-</p>
+            <p>
+              <b>Phone Number:</b>
+              <%= @order.customer.phonenumber %>
+            </p>
 
-<p>
-  <b>Phone Number:</b>
-  <%= @order.customer.phonenumber %>
-</p>
+            <p>
+              <b>Order #:</b>
+              <%= @order.order_number %>
+            </p>
 
-<p>
-  <b>Order #:</b>
-  <%= @order.order_number %>
-</p>
+            <p>
+              <b>Order Date:</b>
+              <%= @order.order_date %>
+            </p>
 
-<p>
-  <b>Order Date:</b>
-  <%= @order.order_date %>
-</p>
+            <p>
+              <b>Assigned Factory:</b>
+              <%= @order.assigned_factory %>
+            </p>
 
-<p>
-  <b>Assigned Factory:</b>
-  <%= @order.assigned_factory %>
-</p>
+            <p>
+              <b>Order value:</b>
+              <%= @order.order_value %>
+            </p>
 
-<p>
-  <b>Order value:</b>
-  <%= @order.order_value %>
-</p>
+            <p>
+              <b>Order discount:</b>
+              <%= @order.order_discount %>
+            </p>
 
-<p>
-  <b>Order discount:</b>
-  <%= @order.order_discount %>
-</p>
+            <p>
+              <b>Order commission:</b>
+              <%= @order.order_cogs %>
+            </p>
+            <p>
+              <b>Order gross:</b>
+              <%= @order.order_gross %>
+            </p>
+            <p>
+              <b>Expected Shipping Date:</b>
+              <%= @order.expected_ship_date %>
+            </p>
+            <p>
+              <b>Date Shipped:</b>
+              <%= @order.shipped_date %>
+            </p>
+            <p>
+              <b>Status:</b>
+              <%= @order.status %>
+            </p>
+            <p>
+              <b>Shipping Number:</b>
+              <%= @order.shipping_number %>
+            </p>
 
-<p>
-  <b>Order commission:</b>
-  <%= @order.order_cogs %>
-</p>
-<p>
-  <b>Order gross:</b>
-  <%= @order.order_gross %>
-</p>
-<p>
-  <b>Expected Shipping Date:</b>
-  <%= @order.expected_ship_date %>
-</p>
-<p>
-  <b>Date Shipped:</b>
-  <%= @order.shipped_date %>
-</p>
-<p>
-  <b>Status:</b>
-  <%= @order.status %>
-</p>
-<p>
-  <b>Shipping Number:</b>
-  <%= @order.shipping_number %>
-</p>
+            <p>
+              <b>Called:</b>
+              <%= @order.called %>
+            </p>
 
-<p>
-  <b>Called:</b>
-  <%= @order.called %>
-</p>
+            <p>
+              <b>Altered:</b>
+              <%= @order.altered %>
+            </p>
 
-<p>
-  <b>Altered:</b>
-  <%= @order.altered %>
-</p>
+            <p>
+              <b>Returned:</b>
+              <%= @order.refunded %>
+            </p>
 
-<p>
-  <b>Returned:</b>
-  <%= @order.refunded %>
-</p>
+            <p>
+              <b>Cost of Return:</b>
+              <%= @order.alt_ref_cost %>
+            </p>
 
-<p>
-  <b>Cost of Return:</b>
-  <%= @order.alt_ref_cost %>
-</p>
-<% if @order.customer.meas_final.neck.present? %>
-    <%= render 'show_meas_final' %>
-<% else %>
-     <%= render 'show_meas_initial' %>
-<% end %>
+           <div class ="span6">     
 
+              <% if @order.customer.meas_final.neck.present? %>
+                  <%= render 'show_meas_final' %>
+              <% else %>
+                   <%= render 'show_meas_initial' %>
+              <% end %>
+      
+              <ul>
+                <li>
+                <% for suit in @order.suits %>
+                  <%= render 'show_suit', f: suit %>
+                <% end %>
+                </li>
+              </ul>
 
-<ul>
-  <li>
-  <% for suit in @order.suits %>
-    <%= render 'show_suit', f: suit %>
-  <% end %>
-  </li>
-</ul>
+              <ul>
+                <li>
+                <% for shirt in @order.shirts %>
+                  <%= render 'show_shirt', f: shirt %>
+                <% end %>
+                </li>
+              </ul>
 
-<ul>
-  <li>
-  <% for shirt in @order.shirts %>
-    <%= render 'show_shirt', f: shirt %>
-  <% end %>
-  </li>
-</ul>
+              <ul>
+                <li>
+                <% for pant in @order.pants %>
+                  <%= render 'show_pant', f: pant %>
+                <% end %>
+                </li>
+              </ul>
 
-<ul>
-  <li>
-  <% for pant in @order.pants %>
-    <%= render 'show_pant', f: pant %>
-  <% end %>
-  </li>
-</ul>
+              <ul>
+                <li>
+                <% for other in @order.others %>
+                  <%= render 'show_other', f: other %>
+                <% end %>
+                </li>
+              </ul>
 
-<ul>
-  <li>
-  <% for other in @order.others %>
-    <%= render 'show_other', f: other %>
-  <% end %>
-  </li>
-</ul>
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+              <%= link_to 'Edit', edit_order_path(@order) %> |
+              <%= link_to 'Back', orders_path %>
+            </div>
+          </fieldset>  
+        </div>
+      </form>
+    </div>
+  </div> 

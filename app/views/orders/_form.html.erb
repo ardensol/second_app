@@ -5,6 +5,7 @@
     <%= f.hidden_field :customer_id %>
     <%= f.input :order_number %>
     <%= f.input :order_date %>
+    <%= f.input :assigned_factory %>
     <%= f.input :order_value %>
     <%= f.input :order_discount %>
     <%= f.input :order_cogs %>
@@ -21,22 +22,23 @@
     <%= f.fields_for :shirts do |builder| %>
     <%= render 'shirt_fields', f: builder %>
     <% end %>
-    <%= link_to_add_fields "Add Shirt", f, :shirts %>
-
+    
     <%= f.fields_for :suits do |builder| %>
     <%= render 'suit_fields', f: builder %>
     <% end %>
-    <%= link_to_add_fields "Add Suit", f, :suits %>
 
   <%= f.fields_for :pants do |builder| %>
     <%= render 'pant_fields', f: builder %>
     <% end %>
-    <%= link_to_add_fields "Add Pant", f, :pants %>
+    
   </div>
 
     <%= f.fields_for :others do |builder| %>
     <%= render 'other_fields', f: builder %>
     <% end %>
+    <%= link_to_add_fields "Add Shirt", f, :shirts %>
+    <%= link_to_add_fields "Add Suit", f, :suits %>
+    <%= link_to_add_fields "Add Pant", f, :pants %>
     <%= link_to_add_fields "Add Other", f, :others %>
   </div>
   

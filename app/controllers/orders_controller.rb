@@ -18,7 +18,12 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @order }
+      format.pdf do
+        pdf = OrderPdf.new(@order, view_context)
+        send_data pdf.render, filename: "order_#{@order.order_number}.pdf",
+                              type: "application/pdf",
+                              disposition: "inline"
+      end
     end
   end
 

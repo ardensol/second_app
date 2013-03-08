@@ -1,10 +1,9 @@
 # TO DOS
-	#ADD PDF OUTPUT FOR ORDERS
 	#ADD DASHBOARD
 	#ADD SCRAPER
 	#FiX JQUERY error in pages
 	#Reorder Measurements Entry
-  #create order link in index
+  #Create Dropdown options
     
 source 'https://rubygems.org'
 
@@ -18,7 +17,7 @@ gem 'thin'
 gem 'cancan'
 gem 'nokogiri'
 gem 'mechanize'
-
+gem 'prawn'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
